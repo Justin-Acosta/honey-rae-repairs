@@ -1,3 +1,28 @@
+import './App.css'
+import { Routes, Route, } from 'react-router-dom'
+import { Login } from './components/auth/Login.jsx'
+import { Register } from './components/auth/Register.jsx'
+import { Authorized } from './views/Authorized.jsx'
+import { ApplicationViews } from './views/ApplicationViews.jsx'
+
+//[state variable, setter function] = useState(starting value)
+
 export const App = () => {
-  return <div className="welcome">Welcome to your first React Application!</div>
+
+  return (
+    <Routes>
+
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+
+      <Route path='*' element={
+        //checks if user is authorized and returns application views accordingly.
+        //uses the 
+        <Authorized>
+          <ApplicationViews />
+        </Authorized>
+      } />
+
+    </Routes>
+  )
 }

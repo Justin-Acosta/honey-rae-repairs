@@ -1,0 +1,24 @@
+.customers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem;
+  }
+
+  .customers > * {
+    flex-basis: 31%;
+    margin: 0.5rem;
+  }
+
+  .currentUser {
+    background-color: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  .currentUser-info {
+    color: var(--info);
+    font-family: "Roboto", sans-serif;
+  }
